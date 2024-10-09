@@ -1,0 +1,25 @@
+import java.util.Scanner;
+public class Main
+{
+   public static void main(String args[]){
+       Scanner input = new Scanner(System.in);
+       System.out.println("If you provide me some information I will provide a Science Fiction name for you.");
+       System.out.println("Please have all responses be at least three characters long.");
+       System.out.print("Enter your first name: ");
+       String name1 = input.nextLine();
+       System.out.print("Enter your last name: ");
+       String name2 = input.nextLine();
+       System.out.print("Enter the city where you or one of your parents were born: ");
+       String city = input.nextLine();    
+       System.out.print("Enter the name of your grammar school: ");
+       String school = input.nextLine();
+       System.out.print("Enter the first name of a sibling or other relative: ");
+       String relative1 = input.nextLine();
+       System.out.print("Enter the first name of a second sibling or relative: ");
+       String relative2 = input.nextLine();
+       
+       
+       
+       System.out.println("Hello " + sciName + ". Welcome!")
+    }
+}
