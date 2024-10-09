@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Random;
 public class Main
 {
    public static void main(String args[]){
@@ -18,8 +19,12 @@ public class Main
        System.out.print("Enter the first name of a second sibling or relative: ");
        String relative2 = input.nextLine();
        
+       String sciFN = name1.substring(0, 3) + name2.substring(0, 2); 
+       String sciLN = city.substring(0, 2) + school.substring((name.length() - 2)); 
+       int index = (int)(Math.random() * (relative1.length() - 1)) + 1;
+       String sciOrigin = relative1.substring(index) + relative2.substring(index);
        
-       
-       System.out.println("Hello " + sciName + ". Welcome!")
+       String sciName = sciFN.toTitleCase() + " " + sciLN.toTitleCase() + " of " + sciOrigin.toTitleCase();
+       System.out.println("Hello " + sciName + ". Welcome!");
     }
 }
