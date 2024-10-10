@@ -20,11 +20,14 @@ public class Main
        String relative2 = input.nextLine();
        
        String sciFN = name1.substring(0, 3) + name2.substring(0, 2); 
-       String sciLN = city.substring(0, 2) + school.substring((name.length() - 2)); 
+       sciFN = (sciFN.substring(0, 1).toUpperCase()) + (sciFN.substring(1).toLowerCase()); 
+       String sciLN = city.substring(0, 2) + school.substring((school.length() - 2)); 
+       sciLN = (sciLN.substring(0, 1).toUpperCase()) + (sciLN.substring(1).toLowerCase()); 
        int index = (int)(Math.random() * (relative1.length() - 1)) + 1;
        String sciOrigin = relative1.substring(index) + relative2.substring(index);
+       sciOrigin = (sciOrigin.substring(0, 1).toUpperCase()) + (sciOrigin.substring(1).toLowerCase()); 
        
-       String sciName = sciFN.toTitleCase() + " " + sciLN.toTitleCase() + " of " + sciOrigin.toTitleCase();
+       String sciName = sciFN + " " + sciLN + " of " + sciOrigin;
        System.out.println("Hello " + sciName + ". Welcome!");
     }
 }
