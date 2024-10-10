@@ -21,10 +21,11 @@ public class Main
        
        String sciFN = name1.substring(0, 3) + name2.substring(0, 2); 
        sciFN = (sciFN.substring(0, 1).toUpperCase()) + (sciFN.substring(1).toLowerCase()); 
-       String sciLN = city.substring(0, 2) + school.substring((school.length() - 2)); 
+       String sciLN = city.substring(0, 2) + school.substring((school.length() - 3)); 
        sciLN = (sciLN.substring(0, 1).toUpperCase()) + (sciLN.substring(1).toLowerCase()); 
-       int index = (int)(Math.random() * (relative1.length() - 1)) + 1;
-       String sciOrigin = relative1.substring(index) + relative2.substring(index);
+       int index1 = (int)(Math.random() * (relative1.length() - 1)) + 1;
+       int index2 = (int)(Math.random() * (relative2.length() - 1)) + 1;
+       String sciOrigin = relative1.substring(index1) + relative2.substring(index2);
        sciOrigin = (sciOrigin.substring(0, 1).toUpperCase()) + (sciOrigin.substring(1).toLowerCase()); 
        
        String sciName = sciFN + " " + sciLN + " of " + sciOrigin;
